@@ -32,13 +32,13 @@
  2. docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:8.7-community 
  Выполнение представлено на скриншотах ниже:
 
- ![1]()
+ ![1](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/jpg/1.png)
 
- ![2]()
+ ![2](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/jpg/2.png)
 
- ![3]()
+ ![3](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/jpg/3.png)
 
- ![4]()
+ ![4](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/jpg/4.png)
 
 ## Знакомство с Nexus
 
@@ -60,13 +60,18 @@
 
 1. docker pull sonatype/nexus3
 2. docker run -d -p 8081:8081 --name nexus sonatype/nexus3 
+
+Команда для вывода пароля с контенера Docker для Nexus:
+
+`docker exec -it nexus cat /nexus-data/admin.password`
+
 Выполнение задания представлено на скриншотах ниже:
 
- ![5]()
+ ![5](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/jpg/5.png)
 
- ![6]()
+ ![6](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/jpg/6.png)
 
-[maven-metadata.xml]()
+[maven-metadata.xml](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/maven-metadata.xml)
 
 ### Знакомство с Maven
 
@@ -85,7 +90,7 @@
 3. Проверьте директорию `~/.m2/repository/`, найдите ваш артефакт.
 4. В ответе пришлите исправленный файл `pom.xml`.
 
-[pom.xml]()
+[pom.xml](https://github.com/smabramov/09-ci-03-cicd/blob/1f6379e5efc1dee3a1ad316d37e683620672c444/pom.xml)
 
 ---
 
